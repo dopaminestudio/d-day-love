@@ -12,7 +12,6 @@ export const metadata: Metadata = {
   description: "연인과의 특별한 날을 기념하는 D-day 계산기",
   keywords: ["D-day", "커플", "기념일", "연인", "데이트", "사랑", "기념", "계산기"],
   applicationName: "커플 D-day 계산기",
-  themeColor: "#ffb6b9",
   category: "데이트, 기념일, 커플",
   icons: {
     icon: "/favicon.ico",
