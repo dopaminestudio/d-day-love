@@ -1,4 +1,5 @@
 import "@/app/globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import type React from "react";
@@ -46,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </ThemeProvider>
       </body>
+      <GoogleAnalytics gaId="G-47JE73BPQQ" />
     </html>
   );
 }
