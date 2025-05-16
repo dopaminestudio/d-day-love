@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   keywords: ["D-day", "커플", "기념일", "연인", "데이트", "사랑", "기념", "계산기"],
   applicationName: "커플 D-day 계산기",
   category: "데이트, 기념일, 커플",
+  metadataBase: new URL("https://ddaylove.netlify.app"),
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
