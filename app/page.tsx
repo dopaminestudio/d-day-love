@@ -16,16 +16,13 @@ import { cn } from "@/lib/utils";
 
 export default function DdayCalculator() {
   const [startDate, setStartDate] = useState<Date | undefined>(undefined);
-  const [relationshipTitle, setRelationshipTitle] = useState("우리의 연애");
   const [isOpen, setIsOpen] = useState(false);
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
-  const [years, setYears] = useState<number[]>([]);
 
   // 연도 목록 생성 (현재 연도부터 10년 전까지)
   useEffect(() => {
     const currentYear = new Date().getFullYear();
     const yearList = Array.from({ length: 20 }, (_, i) => currentYear - i);
-    setYears(yearList);
   }, []);
 
   // 현재 날짜
@@ -63,11 +60,6 @@ export default function DdayCalculator() {
 
   const upcomingAnniversaries = calculateUpcomingAnniversaries();
 
-  // 연도 변경 핸들러
-  const handleYearChange = (year: string) => {
-    setSelectedYear(Number.parseInt(year));
-  };
-
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-linear-to-br from-pink-100 via-rose-50 to-white p-4">
       <div className="w-full max-w-md space-y-6">
@@ -87,7 +79,7 @@ export default function DdayCalculator() {
           <CardHeader className="text-center relative z-10">
             <CardTitle className="text-2xl font-bold text-pink-600 flex items-center justify-center">
               <Sparkles className="h-5 w-5 mr-2 text-pink-500" />
-              {relationshipTitle}
+              우리의 연애
               <Sparkles className="h-5 w-5 ml-2 text-pink-500" />
             </CardTitle>
             <CardDescription>연애 시작일을 입력하고 특별한 날들을 확인하세요</CardDescription>
