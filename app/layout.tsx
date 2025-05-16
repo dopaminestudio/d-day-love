@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     title: "커플 D-day 계산기",
     description: "연인과의 특별한 날을 기념하는 D-day 계산기",
   },
+  verification: {
+    google: "rdjN5J-LdWDojRgp3r1S1Lcf49HjxOUcZkEqz0FOw6M",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
