@@ -5,7 +5,7 @@ import React from "react";
 import { addDays, differenceInDays, format } from "date-fns";
 import { ko } from "date-fns/locale";
 import { Calendar, CalendarIcon, Gift, Heart, Sparkles } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Calendar as CalendarComponent } from "@/components/ui/calendar";
@@ -17,13 +17,6 @@ import { cn } from "@/lib/utils";
 export default function DdayCalculator() {
   const [startDate, setStartDate] = useState<Date | undefined>(undefined);
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
-
-  // 연도 목록 생성 (현재 연도부터 10년 전까지)
-  useEffect(() => {
-    const currentYear = new Date().getFullYear();
-    const yearList = Array.from({ length: 20 }, (_, i) => currentYear - i);
-  }, []);
 
   // 현재 날짜
   const today = new Date();
@@ -115,9 +108,6 @@ export default function DdayCalculator() {
                     }}
                     locale={ko}
                     initialFocus
-                    defaultMonth={new Date(selectedYear, 0)}
-                    fromYear={selectedYear - 10}
-                    toYear={selectedYear + 10}
                   />
                 </PopoverContent>
               </Popover>
