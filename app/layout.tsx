@@ -22,16 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "커플 D-day 계산기",
     description: "연인과의 특별한 날을 기념하는 D-day 계산기",
-    url: "https://your-domain.com/",
     siteName: "커플 D-day 계산기",
-    images: [
-      {
-        url: "https://your-domain.com/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "커플 D-day 계산기 오픈그래프 이미지",
-      },
-    ],
     locale: "ko_KR",
     type: "website",
   },
@@ -39,7 +30,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "커플 D-day 계산기",
     description: "연인과의 특별한 날을 기념하는 D-day 계산기",
-    images: ["https://your-domain.com/og-image.png"],
   },
 };
 
